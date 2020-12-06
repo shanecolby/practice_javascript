@@ -220,13 +220,14 @@ console.log(descending([1, 3, 5, 7]));
 
 
 // Write a method that accepts two arrays of numbers, and returns an array of every sum of every combination of single numbers from the first and second array. For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should return this array: [101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
-def sum_combinations(numbers1, numbers2)
-result = []
-numbers1.each do | number1 |
-  numbers2.each do | number2 |
-    result << number1 + number2
-    end
-  end
-result
-end
-p sum_combinations([1, 5, 10], [100, 500, 1000])
+
+function sumCombinations(numbers1, numbers2) {
+  var result = [];
+  numbers1.forEach(function (number1) {
+    numbers2.forEach(function (number2) {
+      result.push(number1 + number2);
+    });
+  });
+  return result;
+}
+console.log(sumCombinations([1, 5, 10], [100, 500, 1000]));

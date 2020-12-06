@@ -277,16 +277,28 @@
 
 // 4. Write a function that takes in an array of words and returns the number of words that begin with the letter “a”.
 
-function a_words(words) {
-  var result = 0;
-  var i = 0;
-  while (i < words.length) {
-    if (words[i][0] === "a") {
-      result = result + 1
-    };
-    i++;
-  };
-  return result;
-}
-console.log(a_words(["apples", "carrot", "asparagus", "lemon"]));
+// function a_words(words) {
+//   var result = 0;
+//   var i = 0;
+//   while (i < words.length) {
+//     if (words[i][0] === "a") {
+//       result = result + 1
+//     };
+//     i++;
+//   };
+//   return result;
+// }
+// console.log(a_words(["apples", "carrot", "asparagus", "lemon"]));
+setTimeout(function () {
+  console.log("First task done!");
+}, 2000);
+
+setTimeout(function () {
+  console.log("Second task done!");
+}, 4000);
+
+setTimeout(function () {
+  console.log("Third task done!");
+}, 6000);
+
 

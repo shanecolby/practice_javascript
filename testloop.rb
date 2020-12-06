@@ -188,39 +188,83 @@
 # p max([5, 4, 8, 1, 2])
 
 # Write a method that accepts a number and returns its factorial. For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
-def factorial(number)
-  result = 1
-  current_number = number
-  number.times do
-    result = result * current_number
-    current_number = current_number - 1
-  end
-  result
-end
-p factorial(5)
+
+# def factorial(number)
+#   result = 1
+#   current_number = number
+#   number.times do
+#     result = result * current_number
+#     current_number = current_number - 1
+#   end
+#   result
+# end
+# p factorial(5)
 
 
 # Write a method that accepts one argument - an array of numbers that are in ascending order. The method that returns a new array with the same values in descending order. However, do not use the "reverse" method built into Ruby.
-def descending(numbers)
-  result = []
-  index = numbers.length - 1
-  numbers.length.times do
-    result << numbers[index]
-    index = index - 1
-  end
-  result
-end
-p descending([1, 3, 5, 7])
+
+# def descending(numbers)
+#   result = []
+#   index = numbers.length - 1
+#   numbers.length.times do
+#     result << numbers[index]
+#     index = index - 1
+#   end
+#   result
+# end
+# p descending([1, 3, 5, 7])
 
 
 # Write a method that accepts two arrays of numbers, and returns an array of every sum of every combination of single numbers from the first and second array. For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should return this array: [101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
-def sum_combinations(numbers1, numbers2)
+
+# def sum_combinations(numbers1, numbers2)
+#   result = []
+#   numbers1.each do |number1|
+#     numbers2.each do |number2|
+#       result << number1 + number2
+#     end
+#   end
+#   result
+# end
+# p sum_combinations([1, 5, 10], [100, 500, 1000])
+
+# 1. Write a function that takes in an array of numbers and returns its sum.
+
+# def sum(numbers)
+#   sum = 0
+#   index = 0
+#   while index < numbers.length
+#     sum = sum + numbers[index]
+#     index += 1
+#   end
+#   sum
+# end
+# p sum([1,2,3,4,5])
+
+# 2. Write a function that takes in an array of strings and returns the smallest string.
+
+# def smallest_string(string)
+#   result = string[0]
+#   index = 0
+#   while index < string.length
+#     if string[index].length < result.length
+#       result = string[index]
+#     end
+#     index += 1
+#   end
+#   result
+# end
+# p smallest_string(["pickles", "grapes", "watermelon"])
+
+# 3. Write a function that takes in an array of numbers and returns a new array with the numbers in reverse order.
+
+def reversed_numbers(numbers)
   result = []
-  numbers1.each do |number1|
-    numbers2.each do |number2|
-      result << number1 + number2
-    end
+  index = numbers.length - 1
+  while index >= 0
+    result << numbers[index]
+    index -= 1
   end
   result
 end
-p sum_combinations([1, 5, 10], [100, 500, 1000])
+p reversed_numbers([1,2,3])

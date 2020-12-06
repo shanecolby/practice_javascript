@@ -192,42 +192,85 @@
 
 
 // Write a method that accepts a number and returns its factorial. For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
-function factorial(number) {
-  var result = 1;
-  var current_number = number;
-  for (var i = 0; i < number; i++) {
-    result = (result * current_number);
-    current_number = (current_number - 1);
-  }
-  return result
-}
-console.log(factorial(5));
+
+// function factorial(number) {
+//   var result = 1;
+//   var current_number = number;
+//   for (var i = 0; i < number; i++) {
+//     result = (result * current_number);
+//     current_number = (current_number - 1);
+//   }
+//   return result
+// }
+// console.log(factorial(5));
 
 
 // Write a method that accepts one argument - an array of numbers that are in ascending order. The method that returns a new array with the same values in descending order. However, do not use the "reverse" method built into Ruby.
 
-function descending(numbers) {
-  var result = [];
-  var index = numbers.length - 1;
-  for (var i = 0; i < numbers.length; i++) {
-    result.push(numbers[index]);
-    index = index - 1
+// function descending(numbers) {
+//   var result = [];
+//   var index = numbers.length - 1;
+//   for (var i = 0; i < numbers.length; i++) {
+//     result.push(numbers[index]);
+//     index = index - 1
 
-  }
-  return result;
-}
-console.log(descending([1, 3, 5, 7]));
+//   }
+//   return result;
+// }
+// console.log(descending([1, 3, 5, 7]));
 
 
 // Write a method that accepts two arrays of numbers, and returns an array of every sum of every combination of single numbers from the first and second array. For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should return this array: [101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
 
-function sumCombinations(numbers1, numbers2) {
+// function sumCombinations(numbers1, numbers2) {
+//   var result = [];
+//   numbers1.forEach(function (number1) {
+//     numbers2.forEach(function (number2) {
+//       result.push(number1 + number2);
+//     });
+//   });
+//   return result;
+// }
+// console.log(sumCombinations([1, 5, 10], [100, 500, 1000]));
+
+// 1. Write a function that takes in an array of numbers and returns its sum.
+
+// function sum(numbers) {
+//   var sum = 0;
+//   var i = 0;
+//   while (i < numbers.length) {
+//     sum = sum + numbers[i];
+//     i++;
+//   };
+//   return sum
+// }
+// console.log(sum([1, 2, 3, 4, 5]))
+
+// # 2. Write a function that takes in an array of strings and returns the smallest string.
+
+// function smallestString(string) {
+//   var result = string[0];
+//   var i = 0;
+//   while (i < string.length) {
+//     if (string[i].length < result.length) {
+//       result = string[i];
+//     };
+//     i++;
+//   };
+//   return result;
+// }
+// console.log(smallestString(["pickles", "grapes", "watermelon"]));
+
+// # 3. Write a function that takes in an array of numbers and returns a new array with the numbers in reverse order.
+
+function reversedNumbers(numbers) {
   var result = [];
-  numbers1.forEach(function (number1) {
-    numbers2.forEach(function (number2) {
-      result.push(number1 + number2);
-    });
-  });
+  var index = numbers.length - 1;
+  while (index >= 0) {
+    result.push(numbers[index]);
+    index -= 1;
+  };
   return result;
+
 }
-console.log(sumCombinations([1, 5, 10], [100, 500, 1000]));
+console.log(reversedNumbers([1, 2, 3]));

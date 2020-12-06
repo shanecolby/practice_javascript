@@ -258,13 +258,30 @@
 
 # 3. Write a function that takes in an array of numbers and returns a new array with the numbers in reverse order.
 
-def reversed_numbers(numbers)
-  result = []
-  index = numbers.length - 1
-  while index >= 0
-    result << numbers[index]
-    index -= 1
+# def reversed_numbers(numbers)
+#   result = []
+#   index = numbers.length - 1
+#   while index >= 0
+#     result << numbers[index]
+#     index -= 1
+#   end
+#   result
+# end
+# p reversed_numbers([1,2,3])
+
+# 4. Write a function that takes in an array of words and returns the number of words that begin with the letter “a”.
+
+  def a_words(words)
+    result = 0
+    index = 0
+    while index < words.length
+      if words[index][0] == "a"
+        result = result + 1
+      end
+      index += 1
+    end
+    result
   end
-  result
-end
-p reversed_numbers([1,2,3])
+  p a_words(["apple", "carrot", "aparagus", "lemon"])
+
+  

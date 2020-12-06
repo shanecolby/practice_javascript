@@ -263,14 +263,30 @@
 
 // # 3. Write a function that takes in an array of numbers and returns a new array with the numbers in reverse order.
 
-function reversedNumbers(numbers) {
-  var result = [];
-  var index = numbers.length - 1;
-  while (index >= 0) {
-    result.push(numbers[index]);
-    index -= 1;
+// function reversedNumbers(numbers) {
+//   var result = [];
+//   var index = numbers.length - 1;
+//   while (index >= 0) {
+//     result.push(numbers[index]);
+//     index -= 1;
+//   };
+//   return result;
+
+// }
+// console.log(reversedNumbers([1, 2, 3]));
+
+// 4. Write a function that takes in an array of words and returns the number of words that begin with the letter “a”.
+
+function a_words(words) {
+  var result = 0;
+  var i = 0;
+  while (i < words.length) {
+    if (words[i][0] === "a") {
+      result = result + 1
+    };
+    i++;
   };
   return result;
-
 }
-console.log(reversedNumbers([1, 2, 3]));
+console.log(a_words(["apples", "carrot", "asparagus", "lemon"]));
+
